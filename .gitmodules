@@ -49,3 +49,12 @@
 [submodule "bundle/wilder.nvim"]
 	path = bundle/wilder.nvim
 	url = git@github.com:gelguy/wilder.nvim.git
+[submodule "bundle/nerdtree-git-plugin"]
+	path = bundle/nerdtree-git-plugin
+	url = git@github.com:Xuyuanp/nerdtree-git-plugin.git
+[submodule "bundle/vim-devicons"]
+	path = bundle/vim-devicons
+	url = git@github.com:ryanoasis/vim-devicons.git
+[submodule "bundle/vim-commentary"]
+	path = bundle/vim-commentary
+	url = git@github.com:tpope/vim-commentary.git
