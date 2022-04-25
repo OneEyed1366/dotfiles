@@ -61,3 +61,12 @@
 [submodule "bundle/ctrlsf.vim"]
 	path = bundle/ctrlsf.vim
 	url = git@github.com:dyng/ctrlsf.vim.git
+[submodule "bundle/ale"]
+	path = bundle/ale
+	url = https://github.com/dense-analysis/ale.git
+[submodule "bundle/vim-easycomplete"]
+	path = bundle/vim-easycomplete
+	url = git@github.com:jayli/vim-easycomplete.git
+[submodule "bundle/vim-tailwindcss"]
+	path = bundle/vim-tailwindcss
+	url = git@github.com:mrdotb/vim-tailwindcss.git
