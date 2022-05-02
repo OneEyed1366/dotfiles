@@ -1,0 +1,65 @@
+@base cd ~
+Basic programms
+@install python3
+@install pip
+@install nodejs
+@install npm
+@install build-essential
+@install git
+@install snap
+@install telegram-desktop
+@install apt-transport-https
+@install ca-certificates
+@install curl
+@install gnupg
+@install lsb-release
+@install apache
+Snap store
+@arch systemctl enable --now snapd.socket
+@arch ln -s /var/lib/snapd/snap /snap
+Google Chrome
+@fedora dnf install fedora-workstation-repositories
+@fedora dnf config-manager --set-enabled google-chrome
+@fedora dnf install google-chrome-stable
+@arch git clone https://aur.archlinux.org/google-chrome.git
+@arch cd Downloads
+@arch cd google-chrome
+@arch makepkg -s
+# @ubuntu wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+# @ubuntu dpkg -i --force-depends google-chrome-stable_current_amd64.deb
+Python, JS & PHP packages
+@conf pip install django pillow Flask
+@arch pacman -Syu install nodejs npm
+@ubuntu curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
+@fedora curl -fsSL https://rpm.nodesource.com/setup_16.x | bash -
+@fedora yum install gcc-c++ make
+@conf npm install yarn @vue/cli @nestjs/cli express mongoose --global
+@ubuntu apt-get install libapache2-mod-php -y
+@ubuntu systemctl restart apache2
+@fedora dnf install php-cli
+@fedora dnf install phpunit composer
+Git config
+@conf cp ./.gitconfig ~/
+@conf ln -s /var/lib/snapd/snap /snap
+@arch systemctl enable --now snapd.socket
+VSCode
+@snap code --classic
+@arch git clone https://aur.archlinux.org/visual-studio-code-bin.git
+@arch cd visual-studio-code-bin/
+@arch makepkg -si
+Docker
+@arch pacman -Syyu docker
+@arch systemctl start docker
+@arch systemctl enable docker
+@fedora dnf -y install dnf-plugins-core
+@fedora dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
+@fedora dnf install docker-ce docker-ce-cli containerd.io
+@ubuntu snap install docker
+@conf systemctl enable docker.service
+@conf systemctl enable containerd.service
+@conf systemctl start docker
+Docker-compose
+@arch curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+@arch chmod +x /usr/local/bin/docker-compose
+@ubuntu curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+@ubuntu chmod +x /usr/local/bin/docker-compose
