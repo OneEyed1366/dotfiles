@@ -1,4 +1,5 @@
 sudo pacman -Syu
+
 #Git
 echo "Git -> Installing..."
 sudo pacman -Syu git --noconfirm
