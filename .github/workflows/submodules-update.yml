@@ -1,14 +1,13 @@
 name: 'Submodules Sync'
-
 on:
-  # Allows you to run this workflow manually from the Actions tab or through HTTP API
-  workflow_dispatch:
   push:
-    branches:
-      - nvim
-      - configs
-      - fish
-      - vim
+    paths:
+      - 'configs/**'
+      - 'nvim/**'
+      - 'vim/**'
+      - 'fish/**'
+  # Allows you to run this workflow manually from the Actions tab
+  # workflow_dispatch:
 
 jobs:
   # This workflow contains a single job called "update"
@@ -41,4 +40,4 @@ jobs:
           git config --global user.name 'Git bot'
           git config --global user.email 'bot@noreply.github.com'
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-          git commit -am "Auto updated submodule references" && git push || echo "No changes to commit"
+          git add -A && git commit -am "Auto updated submodule references" && git push || echo "No changes to commit"
