@@ -13,18 +13,9 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githu
 sudo apt update
 sudo apt install gh -y
 # Node.js & NVM
-echo "NVM, Node.js & NPM installing..."
-wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
-source ~/.profile
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-echo "Installing Node.js 10.4.2, 8.9.2 & latest"
-nvm install node
-nvm install 10.4.1
-nvm install 8.9.2
-echo "Installing NPM & Yarn on latest Node.js"
-nvm use default
+echo "Volta, Node.js & NPM installing..."
+curl https://get.volta.sh | bash
+volta install node
 . ./node-modules.sh
 echo "Installing Cypress required packages"
 sudo apt-get install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb -y
