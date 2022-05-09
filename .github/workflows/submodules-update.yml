@@ -1,0 +1,44 @@
+name: 'Submodules Sync'
+
+on:
+  # Allows you to run this workflow manually from the Actions tab or through HTTP API
+  workflow_dispatch:
+  push:
+    branches:
+      - nvim
+      - configs
+      - fish
+      - vim
+
+jobs:
+  # This workflow contains a single job called "update"
+  update:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          # branch: master
+          # repository: OneEyed1366/dotfiles.git
+          # token: ${{ secrets.GITHUB_TOKEN }}
+          submodules: recursive
+      # Update references
+      - name: Git Sumbodule Update
+        run: |
+          git submodule sync
+          git submodule update --init --recursive
+          # git submodule update --init --recursive
+          # git submodule update --remote --recursive
+
+      - name: Commit update
+        run: |
+          git config --global user.name 'Git bot'
+          git config --global user.email 'bot@noreply.github.com'
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git commit -am "Auto updated submodule references" && git push || echo "No changes to commit"
