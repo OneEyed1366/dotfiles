@@ -14,3 +14,7 @@
 	path = configs
 	url = https://github.com/OneEyed1366/dotfiles.git
 	branch = configs
+[submodule "ideavim"]
+	path = ideavim
+	url = https://github.com/OneEyed1366/dotfiles.git
+	branch = ideavim
