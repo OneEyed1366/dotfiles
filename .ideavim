@@ -1,0 +1,34 @@
+"" Source your .vimrc
+"source ~/.vimrc
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+set number
+set relativenumber
+" Do incremental searching.
+set incsearch
+
+map Q gq
+"" -- No arrows!
+nnoremap <up> :echoe "Use k"<CR>
+nnoremap <down> :echoe "Use j"<CR>
+nnoremap <left> :echoe "Use h"<CR>
+nnoremap <right> :echoe "Use l"<CR>
+"" -- Default keybindings
+imap jj <Esc>
+nnoremap we :w<CR>
+nnoremap qw :wq<CR>
+nnoremap qq :q!<CR>
+"" -- IDE mappings
+map `` <Action>(ActivateProjectToolWindow)
+map `1 <Action>(SearchEverywhere)
+map `3 <Action>(ActivateTerminalToolWindow)
+map `q <Action>(GotoPreviousError)
+map `w <Action>(GotoNextError)
+map `a <Action>(GotoDeclaration)
+map `e <Action>(Move)
+map `r <Action>(RenameElement)
+map cc <Action>(EditorCopy)
+map <CR> <Action>(ShowIntentionActions)
