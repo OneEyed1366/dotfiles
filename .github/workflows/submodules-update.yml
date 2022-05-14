@@ -2,11 +2,11 @@ name: 'Submodules Sync'
 on:
   push:
     branches:
-      - nvim
-      - vim
-      - ideavim
-      - fish
-      - configs
+      - "nvim"
+      - "vim"
+      - "ideavim"
+      - "fish"
+      - "configs"
       
 
 jobs:
