@@ -1,5 +1,13 @@
 name: 'Submodules Sync'
-on: [ push, workflow_dispatch ]
+on:
+  push:
+    branches:
+      - nvim
+      - vim
+      - ideavim
+      - fish
+      - configs
+      
 
 jobs:
   # This workflow contains a single job called "update"
