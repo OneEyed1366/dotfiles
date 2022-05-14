@@ -1,12 +1,7 @@
 name: 'Submodules Sync'
 on:
-  push:
-    branches:
-      - "nvim"
-      - "vim"
-      - "ideavim"
-      - "fish"
-      - "configs"
+  schedule:
+    - cron: "0 0 * * 6"
       
 
 jobs:
