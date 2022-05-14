@@ -1,6 +1,6 @@
 name: 'Submodules Sync'
 on:
-  workflow_call:
+  workflow_dispatch:
   schedule:
     - cron: "0 0 * * 6"
       
