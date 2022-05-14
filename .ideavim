@@ -10,25 +10,26 @@ set relativenumber
 " Do incremental searching.
 set incsearch
 
-map Q gq
 "" -- No arrows!
 nnoremap <up> :echoe "Use k"<CR>
 nnoremap <down> :echoe "Use j"<CR>
 nnoremap <left> :echoe "Use h"<CR>
 nnoremap <right> :echoe "Use l"<CR>
 "" -- Default keybindings
-imap jj <Esc>
+imap jj  <Esc>
 nnoremap we :w<CR>
 nnoremap qw :wq<CR>
 nnoremap qq :q!<CR>
 "" -- IDE mappings
+map gcc <Action>(CommentByLineComment)
 map `` <Action>(ActivateProjectToolWindow)
 map `1 <Action>(SearchEverywhere)
+map `2 <Action>(FindInPath)
 map `3 <Action>(ActivateTerminalToolWindow)
 map `q <Action>(GotoPreviousError)
+map `z <Action>(FindUsages)
 map `w <Action>(GotoNextError)
 map `a <Action>(GotoDeclaration)
 map `e <Action>(Move)
 map `r <Action>(RenameElement)
-map cc <Action>(EditorCopy)
 map <CR> <Action>(ShowIntentionActions)
