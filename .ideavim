@@ -19,17 +19,24 @@ nnoremap <right> :echoe "Use l"<CR>
 imap jj  <Esc>
 nnoremap we :w<CR>
 nnoremap qw :wq<CR>
-nnoremap qq :q!<CR>
+nnoremap df :q!<CR>
 "" -- IDE mappings
-map gcc <Action>(CommentByLineComment)
+map gc <Action>(CommentByLineComment)
 map `` <Action>(ActivateProjectToolWindow)
 map `1 <Action>(SearchEverywhere)
 map `2 <Action>(FindInPath)
 map `3 <Action>(ActivateTerminalToolWindow)
+map `4 <Action>(FileStructurePopup)
+map `= <Action>(ActivateProblemsViewToolWindow)
+map == <Action>(Vcs.Show.Local.Changes)
+map -- <Action>(ActivateVersionControlToolWindow)
+map -= <Action>(Git.Branches)
 map `q <Action>(GotoPreviousError)
 map `z <Action>(FindUsages)
 map `w <Action>(GotoNextError)
 map `a <Action>(GotoDeclaration)
 map `e <Action>(Move)
 map `r <Action>(RenameElement)
+map `z <Action>(VcsShowPrevChangeMarker)
+map `x <Action>(VcsShowNextChangeMarker)
 map <CR> <Action>(ShowIntentionActions)
