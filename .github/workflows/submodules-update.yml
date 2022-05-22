@@ -25,11 +25,11 @@ jobs:
         #   branch: master
         #   repository: OneEyed1366/dotfiles.git
           token: ${{ secrets.GITHUB_TOKEN }}
-        #   submodules: recursive
+          submodules: recursive
       # Update references
-      - name: Git Sumbodule Update
-        run: |
-          git submodule update --init --recursive
+      # - name: Git Sumbodule Update
+      #   run: |
+      #     git submodule update --init --recursive
       #
       - name: Commit update
         run: |
