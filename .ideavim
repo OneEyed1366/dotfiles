@@ -1,10 +1,12 @@
 "" Source your .vimrc
 "source ~/.vimrc
 
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
 set scrolloff=5
 set number
 set relativenumber
-" Do incremental searching.
 set incsearch
 
 "" -- No arrows!
@@ -18,12 +20,13 @@ nnoremap we :w<CR>
 nnoremap qw :wq<CR>
 nnoremap df :q!<CR>
 "" -- IDE mappings
+map `<Space> <Action>(ActivateTerminalToolWindow)
 map gc <Action>(CommentByLineComment)
+map \\\\ <Action>(StartOrStopPomodoro)
 map `` <Action>(ActivateProjectToolWindow)
 map `1 <Action>(SearchEverywhere)
 map `2 <Action>(FindInPath)
-map `3 <Action>(ActivateTerminalToolWindow)
-map `4 <Action>(FileStructurePopup)
+map `3 <Action>(FileStructurePopup)
 map `= <Action>(ActivateProblemsViewToolWindow)
 map == <Action>(Vcs.Show.Local.Changes)
 map -- <Action>(ActivateVersionControlToolWindow)
