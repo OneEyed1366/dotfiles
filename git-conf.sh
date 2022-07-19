@@ -1,3 +1,9 @@
+echo "Git -> Configuring basic things"
+git config --global user.name "OneEyed1366"
+git config --global user.email "psevdoproger@gmail.com"
+git config --global pull.rebase true
+git config --global merge.tool "vimdiff"
+git config --global merge.conflictstyle "diff3"
 echo "Git -> Configuring aliases..."
 git config --global alias.get "clone http://github.com/OneEyed1366/OneEyed1366.git -b"
 git config --global alias.cm "commit -m"
