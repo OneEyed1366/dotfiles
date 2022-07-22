@@ -2,6 +2,7 @@ echo "Git -> Configuring basic things"
 git config --global user.name "OneEyed1366"
 git config --global user.email "psevdoproger@gmail.com"
 git config --global pull.rebase true
+git config --global core.editor "nvim"
 git config --global merge.tool "vimdiff"
 git config --global merge.conflictstyle "diff3"
 echo "Git -> Configuring aliases..."
