@@ -8,7 +8,10 @@ git config --global merge.conflictstyle "diff3"
 echo "Git -> Configuring aliases..."
 git config --global alias.get "clone http://github.com/OneEyed1366/OneEyed1366.git -b"
 git config --global alias.cm "commit -m"
-git config --global alias.acm = "!f() { git add -A && git commit -m \"$1\"; }; f"
+git config --global alias.acm "!f() { git add -A && git commit -m \"$1\"; }; f"
+git config --global alias.delete-branch '!f() { git push -d "$1" "$2" && git branch -d "$2"; }; f'
+git config --global alias.delete-remote-branch '!f() { git push -d "$1" "$2"; }; f'
+git config --global alias.delete-local-branch '!f() { git branc -d "$1"; }; f'
 git config --global alias.commend "commit --amend --no-edit"
 git config --global alias.acommend = "!f() { git add -A && git commit --amend --no-edit; }; f"
 git config --global alias.it "init && git commit -m 'root commit' --allow-empty"
