@@ -12,6 +12,7 @@ bind `s '_fzf_search_variables (set --show | psub) (set --names | psub)'
 bind `a _fzf_search_processes
 
 export PATH="$PATH":"$HOME/.pub-cache/bin"
+export NNN_COLORS='#a744b322' NNN_FCOLORS='dfdfdf6c0000df42bbbaba5f'
 
 set -gx VOLTA_HOME "$HOME/.volta"
 set -gx PATH "$VOLTA_HOME/bin" $PATH
