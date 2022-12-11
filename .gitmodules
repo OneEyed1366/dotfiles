@@ -1,15 +1,15 @@
 [submodule "nvim"]
 	path = nvim
-	url = https://github.com/OneEyed1366/dotfiles.git
-	branch = nvim
+	url = git@github.com:OneEyed1366/dotfiles-neovim.git
+	branch = master
 [submodule "fish"]
 	path = fish
 	url = https://github.com/OneEyed1366/dotfiles.git
 	branch = fish
 [submodule "vim"]
 	path = vim
-	url = git@github.com:OneEyed1366/dotfiles.git
-	branch = vim
+	url = git@github.com:OneEyed1366/dotfiles-vim.git
+	branch = master
 [submodule "configs"]
 	path = configs
 	url = https://github.com/OneEyed1366/dotfiles.git
